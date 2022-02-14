@@ -1,0 +1,18 @@
+using Synapse.Config;
+using System.ComponentModel;
+
+namespace CustomAnoucement
+{
+
+  public class ConfigStart : IConfigSection
+  {
+    [Description("Message played by cassie at the start of every round (leave blank for none)")]
+    public string StartMesssage { get; set; } = "hello i am start cassie";
+
+    [Description("Make the cassie announcement Glitchy")]
+    public bool makeHold { get; set; } = false;
+
+    [Description("Make the cassie annouce Noisy")]
+    public bool isNoisy { get; set; } = false;
+  }
+}
