@@ -43,14 +43,14 @@ namespace CustomAnoucement
 
         public void OnRoundStart()
         {
-            Server.Get.Map.Cassie(ConfigStart.StartMesssage, ConfigStart.makeHold, ConfigStart.isNoisy);
+            Server.Get.Map.Cassie(ConfigStart.Message, ConfigStart.makeHold, ConfigStart.isNoisy);
         }
 
         public void OnTeamSpawn(TeamRespawnEventArgs ev)
         {
             if (ev.TeamID == (int)Team.CHI)
             {
-                Server.Get.Map.Cassie(ConfigRespawn.ChaosSpawnMessage, ConfigRespawn.makeHold, ConfigRespawn.isNoisy);
+                Server.Get.Map.Cassie(ConfigRespawn.Message, ConfigRespawn.makeHold, ConfigRespawn.isNoisy);
             }
         }
 
@@ -58,11 +58,11 @@ namespace CustomAnoucement
         {
             if (ev.SpawnRole == (int)RoleType.ClassD)
             {
-                Server.Get.Map.Cassie(ConfigD.DEscapeMessage, ConfigD.makeHold, ConfigD.isNoisy);
+                Server.Get.Map.Cassie(ConfigD.Message, ConfigD.makeHold, ConfigD.isNoisy);
             }
             else if (ev.SpawnRole == (int)RoleType.Scientist)
             {
-                Server.Get.Map.Cassie(ConfigScientist.SciEscapeMessage, ConfigScientist.makeHold, ConfigScientist.isNoisy);
+                Server.Get.Map.Cassie(ConfigScientist.Message, ConfigScientist.makeHold, ConfigScientist.isNoisy);
             }
         }
 
@@ -72,7 +72,7 @@ namespace CustomAnoucement
             {
                 if (ev.Player.UserId == uid)
                 {
-                    Server.Get.Map.Cassie(ConfigPlayer.PlayerJoinMessage, ConfigPlayer.makeHold, ConfigPlayer.isNoisy);
+                    Server.Get.Map.Cassie(ConfigPlayer.Message, ConfigPlayer.makeHold, ConfigPlayer.isNoisy);
                 }
             }
 
@@ -81,7 +81,7 @@ namespace CustomAnoucement
 
         public void OnRoundEnd()
         {
-            Server.Get.Map.Cassie(ConfigEnd.EndMessage, ConfigEnd.makeHold, ConfigEnd.isNoisy);
+            Server.Get.Map.Cassie(ConfigEnd.Message, ConfigEnd.makeHold, ConfigEnd.isNoisy);
 
         }
 

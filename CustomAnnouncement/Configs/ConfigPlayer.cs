@@ -12,7 +12,7 @@ namespace CustomAnoucement
     };
     
     [Description("The message said by cassie when a player trigger cassie via joining")]
-    public string PlayerJoinMessage { get; set; } = "Player joined";
+    public string Messages { get; set; } = "Player joined";
 
     [Description("Make the cassie announcement Glitchy")]
     public bool makeHold { get; set; } = false;
