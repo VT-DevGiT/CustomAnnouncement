@@ -22,13 +22,13 @@ namespace CustomAnoucement
         public static ConfigDClass ConfigD { get; set; }
         [Synapse.Api.Plugin.Config(section = "CustomAnnouncement - End Round")]
         public static ConfigEnd ConfigEnd { get; set; }
-        [Synapse.Api.Plugin.Config(section = "CustomAnnouncement - Class-D Escape")]
+        [Synapse.Api.Plugin.Config(section = "CustomAnnouncement - Player Join")]
         public static ConfigPlayer ConfigPlayer { get; set; }
         [Synapse.Api.Plugin.Config(section = "CustomAnnouncement - Resapwn (Chaos)")]
         public static ConfigRespawn ConfigRespawn { get; set; }
         [Synapse.Api.Plugin.Config(section = "CustomAnnouncement - Scientist Escape")]
         public static ConfigScientist ConfigScientist { get; set; }
-        [Synapse.Api.Plugin.Config(section = "CustomAnnouncement - RoundStart")]
+        [Synapse.Api.Plugin.Config(section = "CustomAnnouncement - Start Round")]
         public static ConfigStart ConfigStart { get; set; }
         public override void Load()
         {
