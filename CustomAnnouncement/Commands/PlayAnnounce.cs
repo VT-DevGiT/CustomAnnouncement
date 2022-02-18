@@ -33,7 +33,6 @@ namespace CustomAnoucement
             else if (txtAud.ToLower() == "t" || txtAud.ToLower() == "text")
             {
               result.Message = Plugin.ConfigPlayer.Message;
-
             }
 
             break;
@@ -41,12 +40,10 @@ namespace CustomAnoucement
             if (txtAud.ToLower() == "p" || txtAud.ToLower() == "play")
             {
               Server.Get.Map.Cassie(Plugin.ConfigRespawn.Message, Plugin.ConfigRespawn.makeHold, Plugin.ConfigRespawn.isNoisy);
-
             }
             else if (txtAud.ToLower() == "t" || txtAud.ToLower() == "text")
             {
               result.Message = Plugin.ConfigRespawn.Message;
-
             }
             break;
           case "d":
@@ -57,7 +54,6 @@ namespace CustomAnoucement
             else if (txtAud.ToLower() == "t" || txtAud.ToLower() == "text")
             {
               result.Message = Plugin.ConfigD.Message;
-
             }
             break;
           case "sci":
@@ -69,36 +65,30 @@ namespace CustomAnoucement
             else if (txtAud.ToLower() == "t" || txtAud.ToLower() == "text")
             {
               result.Message = Plugin.ConfigScientist.Message;
-
             }
             break;
           case "start":
             if (txtAud.ToLower() == "p" || txtAud.ToLower() == "play")
             {
               Server.Get.Map.Cassie(Plugin.ConfigStart.Message, Plugin.ConfigStart.makeHold, Plugin.ConfigStart.isNoisy);
-
             }
             else if (txtAud.ToLower() == "t" || txtAud.ToLower() == "text")
             {
               result.Message = Plugin.ConfigStart.Message;
-
             }
             break;
           case "end":
             if (txtAud.ToLower() == "p" || txtAud.ToLower() == "play")
             {
               Server.Get.Map.Cassie(Plugin.ConfigEnd.Message, Plugin.ConfigEnd.makeHold, Plugin.ConfigEnd.isNoisy);
-
             }
             else if (txtAud.ToLower() == "t" || txtAud.ToLower() == "text")
             {
               result.Message = Plugin.ConfigEnd.Message;
-
             }
             break;
         }
         result.State = CommandResultState.Ok;
-
       }
       else
       {

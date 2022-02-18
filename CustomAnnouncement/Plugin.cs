@@ -1,8 +1,6 @@
-﻿using Synapse.Api.Plugin;
-using Synapse.Api;
-using Synapse;
+﻿using Synapse;
 using Synapse.Api.Events.SynapseEventArguments;
-using Synapse.Api.Events;
+using Synapse.Api.Plugin;
 
 namespace CustomAnoucement
 {
@@ -38,7 +36,6 @@ namespace CustomAnoucement
             SynapseController.Server.Events.Player.PlayerEscapesEvent += OnEscape;
             SynapseController.Server.Events.Player.PlayerJoinEvent += OnJoin;
             SynapseController.Server.Events.Round.RoundEndEvent += OnRoundEnd;
-
         }
 
         public void OnRoundStart()
@@ -56,11 +53,11 @@ namespace CustomAnoucement
 
         public void OnEscape(PlayerEscapeEventArgs ev)
         {
-            if (ev.SpawnRole == (int)RoleType.ClassD)
+            if (ev.Player.RoleID == (int)RoleType.ClassD)
             {
                 Server.Get.Map.Cassie(ConfigD.Message, ConfigD.makeHold, ConfigD.isNoisy);
             }
-            else if (ev.SpawnRole == (int)RoleType.Scientist)
+            else if (ev.Player.RoleID == (int)RoleType.Scientist)
             {
                 Server.Get.Map.Cassie(ConfigScientist.Message, ConfigScientist.makeHold, ConfigScientist.isNoisy);
             }
@@ -75,8 +72,6 @@ namespace CustomAnoucement
                     Server.Get.Map.Cassie(ConfigPlayer.Message, ConfigPlayer.makeHold, ConfigPlayer.isNoisy);
                 }
             }
-
-
         }
 
         public void OnRoundEnd()
