@@ -1,10 +1,9 @@
 using Synapse.Command;
 using Synapse.Api;
 using Synapse.Api.Plugin;
-using CustomAnoucement;
-using System.Runtime.Remoting.Messaging;
+using Synapse;
 
-namespace repos.Commands
+namespace CustomAnoucement
 {
   [CommandInformation(
       Name = "playannounce",
@@ -98,7 +97,7 @@ namespace repos.Commands
             }
             break;
         }
-        result.State = CommandResultState.OK;
+        result.State = CommandResultState.Ok;
 
       }
       else

@@ -49,7 +49,7 @@ namespace CustomAnoucement
         public void OnTeamSpawn(TeamRespawnEventArgs ev)
         {
             if (ev.TeamID == (int)Team.CHI)
-            {
+            {                
                 Server.Get.Map.Cassie(ConfigRespawn.Message, ConfigRespawn.makeHold, ConfigRespawn.isNoisy);
             }
         }
@@ -82,7 +82,6 @@ namespace CustomAnoucement
         public void OnRoundEnd()
         {
             Server.Get.Map.Cassie(ConfigEnd.Message, ConfigEnd.makeHold, ConfigEnd.isNoisy);
-
         }
 
         public override void ReloadConfigs()

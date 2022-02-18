@@ -29,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -72,11 +73,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configs\ConfigDClass.cs" />
+    <Compile Include="Configs\ConfigEnd.cs" />
+    <Compile Include="Configs\ConfigPlayer.cs" />
+    <Compile Include="Configs\ConfigRespawn.cs" />
+    <Compile Include="Configs\ConfigScientist.cs" />
+    <Compile Include="Configs\ConfigStart.cs" />
+    <Compile Include="Commands\PlayAnnounce.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

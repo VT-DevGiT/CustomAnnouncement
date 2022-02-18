@@ -7,7 +7,7 @@ namespace CustomAnoucement
   public class ConfigStart : IConfigSection
   {
     [Description("Message played by cassie at the start of every round (leave blank for none)")]
-    public string Message { get; set; } = "hello i am start cassie";
+    public string Message { get; set; } = "";
 
     [Description("Make the cassie announcement Glitchy")]
     public bool makeHold { get; set; } = false;

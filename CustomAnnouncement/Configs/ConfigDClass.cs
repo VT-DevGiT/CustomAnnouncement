@@ -8,7 +8,7 @@ namespace CustomAnoucement
   public class ConfigDClass : IConfigSection
   {
     [Description("Message played by cassie at the escape of D boi (leave blank for none)")]
-    public string Message { get; set; } = "Escape D";
+    public string Message { get; set; } = "";
 
     [Description("Make the cassie announcement Glitchy")]
     public bool makeHold { get; set; } = false;
